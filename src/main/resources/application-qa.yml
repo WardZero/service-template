@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test?useLegacyDatetimeCode=false;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    platform: org.hibernate.dialect.H2Dialect
+
+global-properties:
+  environment: development
+  thread-pool: 10

@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: dev
+  main:
+    banner-mode: off
+  security:
+    user:
+      name: wfdss
+      password: wfdss
+  datasource:
+    url: jdbc:h2:mem:test?useLegacyDatetimeCode=false;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    platform: org.hibernate.dialect.H2Dialect
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      jdbc:
+        time_zone: UTC
+
+api:
+  version: 1.0
+
+swagger:
+  enabled: true
+  title: wfdss-microservice-template API
+  description: Microservice template to be used for WFDSS NextGen
+  useDefaultResponseMessages: false
+  enableUrlTemplating: false
+  deepLinking: true
+  defaultModelsExpandDepth: 1
+  defaultModelExpandDepth: 1
+  displayOperationId: false
+  displayRequestDuration: false
+  filter: false
+  maxDisplayedTags: 0
+  showExtensions: false
+
+server:
+  servlet:
+    context-path: /templateservice/v1
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /templateservice/api-docs
